@@ -21,8 +21,12 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
+            'slug' => $this->faker->slug,
+            'tagline' => $this->faker->sentence,
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
+            'image' => 'image.png',
+            'learnings' => ['Learn A', 'Learn B', 'Learn C'],
         ];
     }
 
