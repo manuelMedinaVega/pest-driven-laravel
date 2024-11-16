@@ -14,7 +14,7 @@ it('shows courses overview', function () {
     $thirdCourse = Course::factory()->released()->create();
 
     // Act & Assert
-    get(route('home'))->assertSeeText([
+    get(route('pages.home'))->assertSeeText([
         $firstCourse->title,
         $firstCourse->description,
         $secondCourse->title,
@@ -31,7 +31,7 @@ it('shows only released courses', function () {
     $notReleasedCourse = Course::factory()->create();
 
     // Act & Assert
-    get(route('home'))->assertSeeText($releasedCourse->title)
+    get(route('pages.home'))->assertSeeText($releasedCourse->title)
         ->assertDontSeeText($notReleasedCourse->title);
 });
 
@@ -41,7 +41,7 @@ it('shows courses by release date', function () {
     $newestReleasedCourse = Course::factory()->released()->create();
 
     // Act & Assert
-    get(route('home'))->assertSeeTextInOrder([
+    get(route('pages.home'))->assertSeeTextInOrder([
         $newestReleasedCourse->title,
         $releasedCourse->title,
     ]);
