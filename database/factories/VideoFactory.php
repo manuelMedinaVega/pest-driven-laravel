@@ -20,7 +20,7 @@ class VideoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'slug' => $this->faker->slug,
         ];
     }
 }

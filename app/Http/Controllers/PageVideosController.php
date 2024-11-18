@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Video;
 
 class PageVideosController extends Controller
 {
-    public function __invoke(Course $course)
+    public function __invoke(Course $course, Video $video)
     {
-        //$purchasedCourses = auth()->user()->courses;
+        $video = $video->exists ? $video : $course->videos->first();
 
-        //return view('dashboard', compact('purchasedCourses'));
+        return view('pages.course-videos', compact('video'));
     }
 }
