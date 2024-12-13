@@ -36,4 +36,6 @@ class VideoPlayer extends Component
     {
         return $this->video->id == $videoToCheck->id;
     }
+
+    public function alreadyWatchedByCurrentUser(): bool {}
 }
