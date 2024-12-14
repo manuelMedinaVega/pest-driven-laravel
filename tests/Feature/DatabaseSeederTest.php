@@ -64,7 +64,7 @@ it('adds given videos only once', function () {
 it('adds local test user', function () {
     //Arrange
     App::partialMock()->shouldReceive('environment')->andReturn('local');
-    
+
     // Assert
     $this->assertDatabaseCount(User::class, 0);
 
@@ -78,7 +78,7 @@ it('adds local test user', function () {
 it('does not add test user for production', function () {
     //Arrange
     App::partialMock()->shouldReceive('environment')->andReturn('production');
-    
+
     // Assert
     $this->assertDatabaseCount(User::class, 0);
 
