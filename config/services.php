@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'paddle' => [
+        'client_token' => env('PADDLE_CLIENT_TOKEN')
+    ]
+
 ];
