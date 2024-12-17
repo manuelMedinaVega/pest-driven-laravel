@@ -73,6 +73,6 @@ it('includes courses links', function () {
         ->assertSee([
             route('pages.course-details', $firstCourse),
             route('pages.course-details', $secondCourse),
-            route('pages.course-details', $lastCourse)
+            route('pages.course-details', $lastCourse),
         ]);
 });

@@ -51,7 +51,7 @@ it('includes paddle checkout button', function () {
     $course = Course::factory()
         ->released()
         ->create([
-            'paddle_product_id' => 'product-id'
+            'paddle_product_id' => 'product-id',
         ]);
 
     // Act & Assert
