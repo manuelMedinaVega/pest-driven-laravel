@@ -1,7 +1,6 @@
 <?php
 
 use App\Jobs\HandlePaddlePurchaseJob;
-use App\PaddleSignatureValidator;
 
 return [
     'configs' => [
