@@ -13,8 +13,8 @@ class PaddleSignatureValidator implements SignatureValidator
     public function isValid(Request $request, WebhookConfig $config): bool
     {
         return ! empty($request->toArray());
-        //esto no va a funcionar, porque tendríamos que probar con un webhook enviado
-        //desde paddle, ya que ahí tenemos el signature que podemos verificar
+        // esto no va a funcionar, porque tendríamos que probar con un webhook enviado
+        // desde paddle, ya que ahí tenemos el signature que podemos verificar
         (new Verifier)->verify(
             $request,
             new Secret(config('services.paddle.webhook_secret_key'))

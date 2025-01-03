@@ -46,7 +46,7 @@ it('shows course video count', function () {
 
 it('includes paddle checkout button', function () {
     // Arrange
-    //App::partialMock()->shouldReceive('environment')->andReturn('local');
+    // App::partialMock()->shouldReceive('environment')->andReturn('local');
     config()->set('services.paddle.client_token', 'client_token');
     $course = Course::factory()
         ->released()

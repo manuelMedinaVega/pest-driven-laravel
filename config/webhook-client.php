@@ -27,7 +27,7 @@ return [
              *
              * It should implement \Spatie\WebhookClient\SignatureValidator\SignatureValidator
              */
-            //'signature_validator' => \Spatie\WebhookClient\SignatureValidator\DefaultSignatureValidator::class,
+            // 'signature_validator' => \Spatie\WebhookClient\SignatureValidator\DefaultSignatureValidator::class,
             'signature_validator' => \App\PaddleSignatureValidator::class,
 
             /*

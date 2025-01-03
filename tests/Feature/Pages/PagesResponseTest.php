@@ -6,10 +6,10 @@ use App\Models\Video;
 use function Pest\Laravel\get;
 
 it('gives back successful response for home page', function () {
-    // Act & Assert
-    get(route('pages.home'))->assertOk();
+// Act & Assert
+get(route('pages.home'))->assertOk();
 
-});
+    });
 
 it('gives back successful response for course details page', function () {
     // Arrange
@@ -28,9 +28,9 @@ it('gives back successful response for dashboard page', function () {
 });
 
 it('does not find JetStream registration page', function () {
-    // Act & Assert
-    get('register')->assertNotFound();
-});
+// Act & Assert
+get('register')->assertNotFound();
+    });
 
 it('gives successful response for videos page', function () {
     // Arrange

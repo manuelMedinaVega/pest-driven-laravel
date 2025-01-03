@@ -45,12 +45,12 @@ it('shows courses by release date', function () {
 });
 
 it('includes login if not logged in', function () {
-    // Act & Assert
-    get(route('pages.home'))
-        ->assertOk()
-        ->assertSeeText('Login')
-        ->assertSee(route('login'));
-});
+// Act & Assert
+get(route('pages.home'))
+->assertOk()
+->assertSeeText('Login')
+->assertSee(route('login'));
+    });
 
 it('includes logout if logged in', function () {
     // Act & Assert

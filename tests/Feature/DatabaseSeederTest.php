@@ -62,7 +62,7 @@ it('adds given videos only once', function () {
 });
 
 it('adds local test user', function () {
-    //Arrange
+    // Arrange
     App::partialMock()->shouldReceive('environment')->andReturn('local');
 
     // Assert
@@ -76,7 +76,7 @@ it('adds local test user', function () {
 });
 
 it('does not add test user for production', function () {
-    //Arrange
+    // Arrange
     App::partialMock()->shouldReceive('environment')->andReturn('production');
 
     // Assert
