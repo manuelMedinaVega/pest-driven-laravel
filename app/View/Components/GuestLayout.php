@@ -7,9 +7,7 @@ use Illuminate\View\View;
 
 class GuestLayout extends Component
 {
-    public function __construct(public string $pageTitle = 'LaravelCasts')
-    {
-    }
+    public function __construct(public string $pageTitle = 'LaravelCasts') {}
 
     public function render(): View
     {

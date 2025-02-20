@@ -70,7 +70,7 @@ it('includes title', function () {
     // Arrange
     $course = Course::factory()->released()->create();
     $expectedTitle = config('app.name')." - $course->title";
-    
+
     // Act & Assert
     get(route('pages.course-details', $course))
         ->assertOk()
@@ -84,12 +84,12 @@ it('includes social tags', function () {
     get(route('pages.course-details', $course))
         ->assertOk()
         ->assertSee([
-            '<meta name="description" content="'. $course->description .'">',
+            '<meta name="description" content="'.$course->description.'">',
             '<meta property="og:type" content="website">',
-            '<meta property="og:url" content="' . route('pages.course-details', $course). '">',
-            '<meta property="og:title" content="'. $course->title .'">',
-            '<meta property="og:description" content="'. $course->description .'">',
-            '<meta property="og:image" content="'. asset("images/$course->image_name") .'">',
-            '<meta name="twitter:card" content="summary_large_image">'
+            '<meta property="og:url" content="'.route('pages.course-details', $course).'">',
+            '<meta property="og:title" content="'.$course->title.'">',
+            '<meta property="og:description" content="'.$course->description.'">',
+            '<meta property="og:image" content="'.asset("images/$course->image_name").'">',
+            '<meta name="twitter:card" content="summary_large_image">',
         ], false);
 });

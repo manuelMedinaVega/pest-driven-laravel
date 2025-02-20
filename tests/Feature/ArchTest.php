@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Validator;
 
 it('finds missing debug statements', function () {
-     // Act & Assert
+    // Act & Assert
     expect(['dd', 'dump'])
         ->not->toBeUsed();
-    
+
 });
 
 it('does not use validator facade', function () {
