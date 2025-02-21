@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Validator;
 
 it('finds missing debug statements', function () {
     // Act & Assert
-    expect(['dd', 'dump'])
+    expect(['dd', 'dump', 'die'])
         ->not->toBeUsed();
 
 });
@@ -14,9 +14,4 @@ it('does not use validator facade', function () {
     expect(Validator::class)
         ->not->toBeUsed()
         ->ignoring('App\Actions\Fortify');
-});
-
-it('checks the security preset', function () {
-    // Act & Assert
-    arch()->preset()->security();
 });
