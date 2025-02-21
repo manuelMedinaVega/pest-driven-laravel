@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Validator;
 
 it('finds missing debug statements', function () {
     // Act & Assert
-    expect(['dd', 'dump', 'die'])
+    expect(['dd', 'dump', 'die', 'var_dump'])
         ->not->toBeUsed();
 
 });
