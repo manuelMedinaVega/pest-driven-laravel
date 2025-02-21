@@ -15,3 +15,8 @@ it('does not use validator facade', function () {
         ->not->toBeUsed()
         ->ignoring('App\Actions\Fortify');
 });
+
+it('checks the security preset', function () {
+    // Act & Assert
+    arch()->preset()->security();
+});
