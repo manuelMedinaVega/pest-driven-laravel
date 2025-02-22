@@ -23,5 +23,5 @@ Route::middleware([
 Route::webhooks('webhooks');
 
 Route::get('testing-actions', function() {
-    Log::info('testing, final');
+    Log::info('testing, final 2');
 });
