@@ -1,0 +1,8 @@
+name: Setup
+
+description: Sets up PHP and Composer
+
+runs:
+  using: composite
+  steps:
+    
