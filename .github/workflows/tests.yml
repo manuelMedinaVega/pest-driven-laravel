@@ -23,17 +23,15 @@ jobs:
               MYSQL_DATABASE: pest-driven-laravel
               MYSQL_ALLOW_EMPTY_PASSWORD: yes
 
-        env:
-          PHP_VERSON: '8.3'
-          CACHE_KEY: extension-cache-v1
-          PHP_EXTENSIONS: dom, curl, libxml, mbstring, zip, pcntl, pdo, gd, redis, igbinary, msgpack, lzf, zstd, lz4, memcached, gmp, :php-psr
-
         steps:
             - name: Checkout code
               uses: actions/checkout@v4.2.2
 
             - name: Setup
               uses: ./.github/actions/setup
+              with:
+                php-version: '8.3'
+                php-extensions: 'json, dom, curl, libxml, mbstring'
 
             - name: Install Dependencies
               run: composer install -q --no-interaction
