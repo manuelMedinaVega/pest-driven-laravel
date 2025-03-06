@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Factories\Sequence;
 use function Pest\Laravel\get;
 
 it('cannot be accesed by guest', function () {
-// Act & Assert
-get(route('pages.dashboard'))
-->assertRedirect(route('login'));
+    // Act & Assert
+    get(route('pages.dashboard'))
+        ->assertRedirect(route('login'));
 
-    });
+});
 
 it('lists purchased courses', function () {
     // Arrange
