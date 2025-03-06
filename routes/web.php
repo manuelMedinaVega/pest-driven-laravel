@@ -4,6 +4,7 @@ use App\Http\Controllers\PageCourseDetailsController;
 use App\Http\Controllers\PageDashboardController;
 use App\Http\Controllers\PageHomeController;
 use App\Http\Controllers\PageVideosController;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', PageHomeController::class)->name('pages.home');
@@ -20,3 +21,7 @@ Route::middleware([
 });
 
 Route::webhooks('webhooks');
+
+Route::get('testing-actions', function () {
+    Log::info('testing, coverage report 2');
+});
