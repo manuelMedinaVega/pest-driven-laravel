@@ -45,12 +45,12 @@ it('shows courses by release date', function () {
 });
 
 it('includes login if not logged in', function () {
-// Act & Assert
-get(route('pages.home'))
-->assertOk()
-->assertSeeText('Login')
-->assertSee(route('login'));
-    });
+    // Act & Assert
+    get(route('pages.home'))
+        ->assertOk()
+        ->assertSeeText('Login')
+        ->assertSee(route('login'));
+});
 
 it('includes logout if logged in', function () {
     // Act & Assert
@@ -88,16 +88,16 @@ it('includes title', function () {
 });
 
 it('includes social tags', function () {
-// Act & Assert
-get(route('pages.home'))
-->assertOk()
-->assertSee([
-    '<meta name="description" content="LaravelCasts is the leading learning platform for Laravel developers.">',
-    '<meta property="og:type" content="website">',
-    '<meta property="og:url" content="'.route('pages.home').'">',
-    '<meta property="og:title" content="LaravelCasts">',
-    '<meta property="og:description" content="LaravelCasts is the leading learning platform for Laravel developers.">',
-    '<meta property="og:image" content="'.asset('images/social.png').'">',
-    '<meta name="twitter:card" content="summary_large_image">',
-], false);
-    });
+    // Act & Assert
+    get(route('pages.home'))
+        ->assertOk()
+        ->assertSee([
+            '<meta name="description" content="LaravelCasts is the leading learning platform for Laravel developers.">',
+            '<meta property="og:type" content="website">',
+            '<meta property="og:url" content="'.route('pages.home').'">',
+            '<meta property="og:title" content="LaravelCasts">',
+            '<meta property="og:description" content="LaravelCasts is the leading learning platform for Laravel developers.">',
+            '<meta property="og:image" content="'.asset('images/social.png').'">',
+            '<meta name="twitter:card" content="summary_large_image">',
+        ], false);
+});
